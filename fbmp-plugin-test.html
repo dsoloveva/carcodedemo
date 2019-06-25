@@ -16,7 +16,9 @@
         version          : 'v3.3'
       });
 
-      window.FB.XFBML.parse(null);
+      window.FB.XFBML.parse(null, () => {
+        window.FB.CustomerChat.show();
+      });
     };
 
     (function(d, s, id) {
