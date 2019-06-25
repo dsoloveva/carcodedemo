@@ -12,9 +12,11 @@
   <script>
     window.fbAsyncInit = function() {
       FB.init({
-        xfbml            : true,
+        xfbml            : false,
         version          : 'v3.3'
       });
+
+      window.FB.XFBML.parse(null);
     };
 
     (function(d, s, id) {
