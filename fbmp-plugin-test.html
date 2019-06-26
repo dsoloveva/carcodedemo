@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    .fb_dialog {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <!-- Load Facebook SDK for JavaScript -->
@@ -17,17 +22,16 @@
       greeting_dialog_display="hide">
     </div>
   </div>
+  <button id="custom-fb-button">Open FB</button>
   <script>
+    document.querySelector('#custom-fb-button').addEventListener(() => {
+      FB.CustomerChat.showDialog();
+    });
+
     window.fbAsyncInit = function() {
       FB.init({
         xfbml            : false,
         version          : 'v3.3'
-      });
-
-      window.FB.XFBML.parse(null, () => {
-        window.FB.Event.subscribe('customerchat.dialogShow', () => {
-          console.log('dialogShow');
-        });
       });
     };
 
