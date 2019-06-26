@@ -8,7 +8,14 @@
 </head>
 <body>
   <!-- Load Facebook SDK for JavaScript -->
-  <div id="fb-root"></div>
+  <div id="fb-root">
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="447385849026862"
+      theme_color="#0084ff">
+    </div>
+  </div>
   <script>
     window.fbAsyncInit = function() {
       FB.init({
@@ -17,7 +24,6 @@
       });
 
       window.FB.XFBML.parse(null, () => {
-        window.FB.CustomerChat.show();
         window.FB.Event.subscribe('customerchat.dialogShow', () => {
           console.log('dialogShow');
         });
@@ -31,12 +37,5 @@
     js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
-
-  <!-- Your customer chat code -->
-  <div class="fb-customerchat"
-    attribution=setup_tool
-    page_id="447385849026862"
-    theme_color="#0084ff">
-  </div>
 </body>
 </html>
