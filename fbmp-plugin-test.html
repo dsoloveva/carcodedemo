@@ -18,6 +18,9 @@
 
       window.FB.XFBML.parse(null, () => {
         window.FB.CustomerChat.show();
+        window.FB.Event.subscribe('customerchat.dialogShow', () => {
+          console.log('dialogShow');
+        });
       });
     };
 
