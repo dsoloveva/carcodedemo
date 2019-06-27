@@ -14,18 +14,19 @@
       attribution=setup_tool
       page_id="447385849026862"
       theme_color="#0084ff"
-      greeting_dialog_display="hide">
+      greeting_dialog_display="hide"
+    >
     </div>
   </div>
   <button id="custom-fb-button">Open FB</button>
   <script>
-    // document.querySelector('#custom-fb-button').addEventListener('click', () => {
-    //   FB.CustomerChat.showDialog();
-    // });
+    document.querySelector('#custom-fb-button').addEventListener('click', () => {
+      FB.CustomerChat.showDialog();
+    });
 
     window.fbAsyncInit = function() {
       FB.init({
-        xfbml            : false,
+        xfbml            : true,
         version          : 'v3.3'
       });
     };
