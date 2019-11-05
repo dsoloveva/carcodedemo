@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Widgets Test Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+
+      body {
+          padding: 0;
+          margin: 0;
+      }
+
+      .hero {
+          width: 100%;
+          height: 450px;
+          background: url('https://media.ed.edmunds-media.com/jeep/compass/2018/oem/2018_jeep_compass_4dr-suv_limited_fq_oem_10_815.jpg') no-repeat 0 0;
+          -webkit-background-size: cover;
+          background-size: cover;
+          background-position: center center;
+      }
+      .hero__title {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 100px 0 0;
+          font-weight: bold;
+          font-size: 64px;
+          color: #fff;
+      }
+      .hero__text {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 30px 20% 0 0;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 1.5;
+          color: #fff;
+      }
+
+      .content {
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+      .content > h1 {
+          margin: 1em 0;
+          font-size: 26px;
+          line-height: 1.5;
+          font-family: Arial, Helvetica, sans-serif;
+      }
+      .content > p {
+          font-weight: normal;
+          font-size: 14px;
+          font-family: Arial, Helvetica, sans-serif;
+          line-height: 1.5;
+      }
+      .content > table > tr > td {
+          width: 33%;
+          padding: 20px;
+          vertical-align: top;
+      }
+      .img-rounded {
+          max-width: 100%;
+          margin-bottom: 20px;
+      }
+
+      .carcode-widget-button {
+          display: inline-block;
+          margin-bottom: 20px;
+          padding: 5px 10px;
+          background: #fff;
+          border: 1px solid #e74c3c;
+          border-radius: 4px;
+          color: #e74c3c;
+      }
+      .carcode-widget-button:hover {
+          background: #e74c3c;
+          color: #fff;
+      }
+      .carcode-modal-body {
+        height: 25em;
+      }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXX-Y', 'none');
+      ga('send', 'pageview');
+    </script>
+    <script type='text/javascript'>
+        window.__carcode = {
+            skipButton: false,
+        };
+    </script>
+    <script
+        src="https://dev-dsg11-www.carcodesms.com/widgets/s/1ducwj.js?skip_optimization=true"
+        type='text/javascript'
+        async
+        defer>
+    </script>
+  </head>
+  <body>
+        <div class="container content">
+            <h1>Widgets Test Page</h1>
+            <button class="sms-button btn btn-primary mb-4" data-rooftop-id="879">Contact Dealer</button>
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 mb-4">
+                    <img class="img-rounded" src="https://media.ed.edmunds-media.com/for-sale/a1-wa1bnafy8j2215428/img-1-600x.jpg" alt="">
+                    <button class="sms-button btn btn-secondary" data-vin="WA1BNAFY8J2215428">
+                        <span>2018 Audi Q5</span>
+                    </button>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <img class="img-rounded" src="https://media.ed.edmunds-media.com/for-sale/27-waubegff1ka109009/img-1-600x.jpg" alt="">
+                    <button class="sms-button btn btn-secondary" data-vin="WAUBEGFF1KA109009">
+                        <span>2019 Audi A3</span>
+                    </button>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <img class="img-rounded" src="https://media.ed.edmunds-media.com/for-sale/79-wa1a4afy4k2079329/img-1-600x.jpg" alt="">
+                    <button class="sms-button btn btn-secondary" data-vin="WA1A4AFY4K2079329">
+                        <span>2019 Audi SQ5</span>
+                    </button>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <img class="img-rounded" src="https://media.ed.edmunds-media.com/for-sale/c4-wauencf57ka049508/img-1-600x.jpg" alt="">
+                    <button class="sms-button btn btn-secondary" data-vin="WAUENCF57KA049508">
+                        <span>2019 Audi A5</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+  </body>
+</html>
